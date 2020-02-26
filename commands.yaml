@@ -1,6 +1,6 @@
 sourceBasePath: https://raw.githubusercontent.com/Maljean/nimbella_view_issues/master/src/view_issues.js
 commands:
-  dig:
+  view_issues:
     sourcePath: /view_issues.js
     description: View GitLab issues.
     parameters:
