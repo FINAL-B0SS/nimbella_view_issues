@@ -1,7 +1,7 @@
 // jshint esversion: 9
 
 /**
- * @description null
+ * @description View GitLab issues.
  * @param {ParamsType} params list of command parameters
  * @param {?string} commandText text message
  * @param {!object} [secrets = {}] list of secrets
@@ -53,6 +53,7 @@ async function _command(params, commandText, secrets = {}) {
   const {
     status
   } = params;
+  var issues;
   
   if (!XMLHttpRequest) {
     let packages = [ 'xmlhttprequest' ];
@@ -60,7 +61,13 @@ async function _command(params, commandText, secrets = {}) {
     XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
   }
   
-  var issues = formatIssueText(fetchIssues(status, secrets));
+  if (!secrets.AcessToken_GitLab)
+    issues = 'Missing GitLab Personal Access Token!';
+  else if (!['all', 'opened', 'closed'].includes((status)))
+    issues = 'Status parameter must be opened, closed, or all!';
+  else
+    issues = formatIssueText(fetchIssues(status, secrets));
+  
   
   return {
     response_type: 'in_channel', // or `ephemeral` for private response
