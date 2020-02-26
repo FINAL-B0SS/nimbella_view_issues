@@ -1,4 +1,4 @@
-sourceBasePath: https://raw.githubusercontent.com/Maljean/nimbella_view_issues/master/src/view_issues.js
+sourceBasePath: https://raw.githubusercontent.com/Maljean/nimbella_view_issues/master/src/view_issues
 commands:
   view_issues:
     sourcePath: /view_issues.js
