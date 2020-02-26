@@ -23,6 +23,6 @@ https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
 
 Supported status parameters:
 
-- `All`
-- `Opened`
-- `Closed`
+- `all`
+- `opened`
+- `closed`
