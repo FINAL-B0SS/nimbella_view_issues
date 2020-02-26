@@ -18,7 +18,7 @@ https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
 ## Usage
 
 ```
-/finalboss view_issues <status>
+/<app name> view_issues <status>
 ```
 
 Supported status parameters:
