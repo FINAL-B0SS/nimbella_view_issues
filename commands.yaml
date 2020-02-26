@@ -1,0 +1,8 @@
+sourceBasePath: 
+commands:
+  dig:
+    sourcePath: /view_issues.js
+    description: View GitLab issues.
+    parameters:
+      - name: status
+        optional: false
